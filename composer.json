@@ -1,0 +1,27 @@
+{
+	"name": "silverstripe/platform-installer",
+	"description": "The SilverStripe Platform Installer",
+	"require": {
+		"php": ">=5.3.3",
+		"silverstripe/cms": "~3.2",
+		"silverstripe/framework": "~3.2",
+		"silverstripe/reports": "~3.2",
+		"silverstripe/siteconfig": "~3.2",
+		"silverstripe-themes/simple": "~3.1",
+		"gdmedia/ss-auto-git-ignore": "~0.0",
+		"silverstripe/crontask": "~1.1",
+		"silverstripe/dynamodb": "~1.0",
+		"silverstripe/environmentcheck": "~1.1"
+	},
+	"require-dev": {
+		"phpunit/PHPUnit": "~3.7"
+	},
+	"config": {
+		"process-timeout": 600
+	},
+	"scripts": {
+		"post-update-cmd": "GDM\\SSAutoGitIgnore\\UpdateScript::Go"
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev"
+}
